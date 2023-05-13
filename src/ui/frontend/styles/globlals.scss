@@ -1,0 +1,17 @@
+@import './variables/colors/index.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+
+  color: $primary;
+  background-color: $secondary;
+}
