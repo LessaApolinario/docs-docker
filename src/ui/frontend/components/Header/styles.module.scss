@@ -4,10 +4,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
+
   color: $secondary;
   background-color: $primary;
-  
+
+  border-bottom: 1px solid $secondary;
+
   height: 5.25rem;
   padding: 0.5rem 1rem;
 

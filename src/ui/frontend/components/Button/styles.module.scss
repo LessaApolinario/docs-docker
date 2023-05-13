@@ -1,0 +1,22 @@
+@import '../../styles/variables/colors/index.scss';
+
+.container {
+  border: 0;
+  padding: 0.8rem;
+
+  font-size: 1.05rem;
+
+  cursor: pointer;
+
+  &.primary {
+    color: $secondary;
+    background-color: $primary;
+    border: 1px solid $secondary;
+
+    &:hover {
+      color: $primary;
+      background-color: $secondary;
+      border: 1px solid $primary;
+    }
+  }
+}

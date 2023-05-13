@@ -1,4 +1,10 @@
+@import '../../styles/variables/colors/index.scss';
+
 .container {
   width: 100%;
   min-width: 100%;
+
+  main {
+    padding: 1rem;
+  }
 }
