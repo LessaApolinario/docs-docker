@@ -11,7 +11,17 @@ export function AuthProvider({ children }: PropsWithChildren) {
     try {
       const service = WebDIContainer.getAuthService();
       await service.login(credentials);
-      setUser(service.getCurrentUser())
+      setUser(service.getCurrentUser());
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }, []);
+
+  const logout = useCallback(async () => {
+    try {
+      const service = WebDIContainer.getAuthService();
+      await service.logout();
       return true;
     } catch (error) {
       return false;
@@ -19,6 +29,6 @@ export function AuthProvider({ children }: PropsWithChildren) {
   }, []);
 
   return (
-    <AuthCTX.Provider value={{ user, login }}>{children}</AuthCTX.Provider>
+    <AuthCTX.Provider value={{ user, login, logout }}>{children}</AuthCTX.Provider>
   );
 }

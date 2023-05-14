@@ -8,3 +8,7 @@ export function useAuth() {
 export function useLogin() {
   return useContextSelector(AuthCTX, (ctx) => ctx.login);
 }
+
+export function useLogout() {
+  return useContextSelector(AuthCTX, (ctx) => ctx.logout);
+}

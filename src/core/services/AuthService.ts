@@ -15,6 +15,10 @@ class AuthService extends AuthUseCase {
   getCurrentUser(): User {
     return this.adapter.getCurrentUser();
   }
+
+  logout(): Promise<void> {
+    return this.adapter.logout();
+  }
 }
 
 export default AuthService;
